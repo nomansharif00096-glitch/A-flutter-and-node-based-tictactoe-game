@@ -20,8 +20,7 @@ const io = new Server(server, {
 //middleware
 app.use(express.json());
 
-const DB = "mongodb+srv://noman:test123@cluster0.elkoxye.mongodb.net/?appName=Cluster0";
-
+const DB=process.env.DB;
 io.on("connection", (socket) => {
   console.log("Sockect Connection Successfull ");
 
